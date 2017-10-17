@@ -1,19 +1,23 @@
 package com.hangover;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Hangover {
+public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner input=new Scanner(System.in);
 		while(input.hasNext()) {
 			double length=input.nextDouble();
-			System.out.println(hangover(length));
+			if(length<0.01||length>5.20) {
+				System.exit(0);
+			}
+			System.out.println(new Main().hangover(length)+" card(s)");
 		}
 		
 	}
-static public int hangover(double length) {
+public int hangover(double length) {
 		int i=0;
 		double sum=0;
 		while(sum<length)

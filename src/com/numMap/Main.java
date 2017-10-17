@@ -17,7 +17,7 @@ public class Main {
 		while(in.hasNext()) 
 		{
 				String string1;
-				strings[i]=in.next();
+				strings[i]=in.nextLine();
 				string1=Main.numMap(strings[i]);
 				if(string1!=null) 
 				{
@@ -41,10 +41,10 @@ public class Main {
        boolean flag=false;
        for(Map.Entry<String, Integer> entry:res.entrySet()) {
         	StringBuilder string=new StringBuilder(entry.getKey());
-	    	string.insert(3, "-");
+	    	string.insert(3,"-");
 	    	if(entry.getValue()>1) {
         		flag=true;
-	    	  	System.out.println(string+" "+entry.getValue());
+	    	  	System.out.println(string.toString()+" "+entry.getValue());
 	    	}
         }
     	if(flag==false) 
