@@ -2,8 +2,7 @@ package com.numMap;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-
-import org.omg.CORBA.DynAnyPackage.Invalid;
+import java.util.TreeMap;
 public class Main {
 		public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -17,11 +16,10 @@ public class Main {
 		while(in.hasNext()) 
 		{
 				String string1;
-				strings[i]=in.nextLine();
+				strings[i]=in.next();
 				string1=Main.numMap(strings[i]);
 				if(string1!=null) 
 				{
-					
 					strings1[i]=string1;
 					strings1[i]=strings1[i].replaceAll("null","");
 					map.put(j,strings1[i]);
@@ -30,7 +28,7 @@ public class Main {
 				}
 				if(i==n) break;
 		}
-		Map<String,Integer> res=new HashMap<String,Integer>();  
+		Map<String,Integer> res=new TreeMap<String,Integer>();  
         for (Map.Entry<Integer,String> entry:map.entrySet()){  
             if (res.containsKey(entry.getValue())){  
                 res.put(entry.getValue(),res.get(entry.getValue())+1);  
@@ -40,14 +38,14 @@ public class Main {
         }  
        boolean flag=false;
        for(Map.Entry<String, Integer> entry:res.entrySet()) {
-        	StringBuilder string=new StringBuilder(entry.getKey());
+    	    StringBuilder string=new StringBuilder(entry.getKey());
 	    	string.insert(3,"-");
 	    	if(entry.getValue()>1) {
-        		flag=true;
+       		flag=true;
 	    	  	System.out.println(string.toString()+" "+entry.getValue());
 	    	}
-        }
-    	if(flag==false) 
+       }
+       if(flag==false) 
     		{
         		System.out.println("No duplicates.");
     		}
