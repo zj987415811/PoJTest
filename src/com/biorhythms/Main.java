@@ -6,9 +6,7 @@
  *
  */
 package com.biorhythms;
-
 import java.util.Scanner;
-
 public class Main{
 	public static void main(String[] args) {
 		Scanner input=new Scanner(System.in);
@@ -57,7 +55,7 @@ public class Main{
 						}
 					}
 					if(23*k-28*j==e-p) {
-						System.out.println(n);
+						//System.out.println(n);
 						days=k*23+p-d;
 						return days;
 					}else 
@@ -81,7 +79,6 @@ public class Main{
 				}			
 			}
 		}
-		
 		return days;
 	}
 }
