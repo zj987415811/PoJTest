@@ -17,5 +17,4 @@ public class Main {
 		if(a<b) return a;
 		return mod(a%b, b);
 	}
-	
 }

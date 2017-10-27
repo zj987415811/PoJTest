@@ -1,6 +1,4 @@
 package com.hangover;
-
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main {
